@@ -78,6 +78,30 @@ int buscaBinaria(int *v, int n, int elem)
 }
 
 
+int buscaBinariaRecursiva(int *v, int inicio, int fim, int elem)
+{
+    if(inicio > fim)
+    {
+        return -1;
+    }
+    int meio = (inicio + fim)/ 2;
+    
+    if(v[meio] == elem)
+    {
+        return meio;
+    }
+    
+    if(elem<v[meio])
+    {
+        buscaBinariaRecursiva(v, inicio, meio - 1, elem);
+    }
+    else
+    {
+        buscaBinariaRecursiva(v, meio+1, fim, elem);
+    }
+}
+
+
 
 
 int main()
