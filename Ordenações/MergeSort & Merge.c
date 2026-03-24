@@ -2,15 +2,15 @@
     int meio;
     if(inicio < fim){
         meio = floor((inicio+fim)/2);
-        mergeSort(V, inicio, meio);
-        mergeSort(V, meio + 1, fim);
-        merge(V, inicio, meio, fim);
+        mergeSort(v, inicio, meio);
+        mergeSort(v, meio + 1, fim);
+        merge(v, inicio, meio, fim);
     }
 }
 
 void merge(int *v, int inicio, int meio, int fim){
     int *temp, p1, p2, tamanho, i, j, k;
-    int fim1, fim2 = 0;
+    int fim1 = 0, fim2 = 0;
     tamanho = fim - inicio + 1;
     p1 = inicio;
     p2 = meio + 1;
